@@ -196,7 +196,7 @@
   
     <div class="article-meta">
       <a href="/2016/01/18/2016-1-18/" class="article-date">
-  	<time datetime="2016-01-18T12:36:45.000Z" itemprop="datePublished">2016-01-18</time>
+  	<time datetime="2016-01-19T04:59:43.000Z" itemprop="datePublished">2016-01-18</time>
 </a>
     </div>
   
@@ -218,22 +218,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>新建Branch</strong><br>第一步：<br>查看当前branch 和远程服务器branch<br>newdeMacBook-Pro-3:cashier PengYanan$ git branch -a</p>
-<ul>
-<li>develop_v1.4.0<br>develop_v1.4.0_test<br>remotes/origin/develop_v1.0.0<br>remotes/origin/develop_v1.1.0<br>remotes/origin/develop_v1.2.0<br>remotes/origin/develop_v1.3.0<br>remotes/origin/develop_v1.4.0<br>remotes/origin/develop_v1.4.0_test<br>remotes/origin/master</li>
-</ul>
+        <p><strong>新建Branch</strong></p>
+<blockquote>
+<p>第一步：</p>
+</blockquote>
+<p>查看当前branch 和远程服务器branch<br>newdeMacBook-Pro-3:cashier PengYanan$ git branch -a<br>  *develop_v1.4.0<br>  develop_v1.4.0_test<br>  remotes/origin/develop_v1.0.0<br>  remotes/origin/develop_v1.1.0<br>  remotes/origin/develop_v1.2.0<br>  remotes/origin/develop_v1.3.0<br>  remotes/origin/develop_v1.4.0<br>  remotes/origin/develop_v1.4.0_test<br>  remotes/origin/master</p>
 <p>当前branch 为* xxxxx</p>
-<p>第二步：<br>git log 查看commit历史</p>
-<p>commit e51667bc36de19c3043d109c45e65611ba5bc9e6<br>Author: **<br>Date:   Mon Jan 18 16:38:04 2016 +0800</p>
-<pre><code>修改插入数据自动返回id,
-</code></pre><p>第三步：<br>git checkout -b <new branch="" name=""> e51667bc36de19c3043d109c45e65611ba5bc9e6</new></p>
-<p>This will create the new branch and check it out.</p>
-<p>git push <remote-name> <new branch="" name=""></new></remote-name></p>
-<p><strong>删除branch</strong></p>
-<p>To delete a local branch<br>git branch -d the_local_branch</p>
-<p>To remove a remote branch (if you know what you are doing!)</p>
-<p>git push origin :the_remote_branch</p>
-<p>参考<br><a href="http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch/" target="_blank" rel="external">http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch/</a><br><a href="http://stackoverflow.com/questions/7167645/how-do-i-create-a-new-git-branch-from-an-old-commit" target="_blank" rel="external">http://stackoverflow.com/questions/7167645/how-do-i-create-a-new-git-branch-from-an-old-commit</a></p>
+<blockquote>
+<p>第二步：</p>
+</blockquote>
+<p><code>git log &lt;branchName&gt;</code> 查看commit历史</p>
+<p>commit e51667bc36de19c3043d109c45e65611ba5bc9e6<br>Author: **<br>Date:   Mon Jan 18 16:38:04 2016 +0800<br>    fix bug#000111</p>
+<blockquote>
+<p>第三步：</p>
+</blockquote>
+<pre><code>git checkout -b &lt;new branch name&gt; e51667bc36de19c3043d109c45e65611ba5bc9e6
+</code></pre><p>This will create the new branch and check it out.</p>
+<pre><code>git push &lt;remote-name&gt; &lt;new branch name&gt;
+</code></pre><p><strong>删除branch</strong></p>
+<p>To delete a local branch</p>
+<pre><code>git branch -d the_local_branch
+</code></pre><p>To remove a remote branch (if you know what you are doing!)</p>
+<pre><code>git push origin :the_remote_branch
+</code></pre><p>参考<br><a href="http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch/" target="_blank" rel="external">http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch/</a><br><a href="http://stackoverflow.com/questions/7167645/how-do-i-create-a-new-git-branch-from-an-old-commit" target="_blank" rel="external">http://stackoverflow.com/questions/7167645/how-do-i-create-a-new-git-branch-from-an-old-commit</a></p>
 
       
     </div>
