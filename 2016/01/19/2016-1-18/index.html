@@ -12,14 +12,14 @@
 查看当前branch 和远程服务器branchnewdeMacBook-Pro-3:cashier PengYanan$ git branch -a  *develop_v1.4.0  develop_v1.4.0_test  remotes/origin/develop_v1.0.0  remotes/origin/develop_v1.1.0  remotes/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 新建 删除branch">
-<meta property="og:url" content="http://yoursite.com/2016/01/18/2016-1-18/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/01/19/2016-1-18/index.html">
 <meta property="og:site_name" content="Zara.Peng's Blog">
 <meta property="og:description" content="新建Branch
 
 第一步：
 
 查看当前branch 和远程服务器branchnewdeMacBook-Pro-3:cashier PengYanan$ git branch -a  *develop_v1.4.0  develop_v1.4.0_test  remotes/origin/develop_v1.0.0  remotes/origin/develop_v1.1.0  remotes/">
-<meta property="og:updated_time" content="2016-01-19T04:59:43.000Z">
+<meta property="og:updated_time" content="2016-01-19T08:57:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 新建 删除branch">
 <meta name="twitter:description" content="新建Branch
@@ -206,8 +206,8 @@
       <div class="body-wrap"><article id="post-2016-1-18" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/18/2016-1-18/" class="article-date">
-  	<time datetime="2016-01-19T04:59:43.000Z" itemprop="datePublished">2016-01-18</time>
+      <a href="/2016/01/19/2016-1-18/" class="article-date">
+  	<time datetime="2016-01-19T08:57:24.000Z" itemprop="datePublished">2016-01-19</time>
 </a>
     </div>
   
@@ -258,10 +258,15 @@
 </code></pre><p>This will create the new branch and check it out.</p>
 <pre><code>git push &lt;remote-name&gt; &lt;new branch name&gt;
 </code></pre><p><strong>删除branch</strong></p>
-<p>To delete a local branch</p>
+<p>To delete a local branch/tag</p>
 <pre><code>git branch -d the_local_branch
-</code></pre><p>To remove a remote branch (if you know what you are doing!)</p>
+git tag -d the_local_tag
+</code></pre><p>To remove a remote branch</p>
 <pre><code>git push origin :the_remote_branch
+git push origin --delete the_remote_branch
+</code></pre><p>To remove a remote tag</p>
+<pre><code>git push origin :refs/tags/the_remote_tag
+git push origin --delete tag the_remote_tag
 </code></pre><p>参考<br><a href="http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch/" target="_blank" rel="external">http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch/</a><br><a href="http://stackoverflow.com/questions/7167645/how-do-i-create-a-new-git-branch-from-an-old-commit" target="_blank" rel="external">http://stackoverflow.com/questions/7167645/how-do-i-create-a-new-git-branch-from-an-old-commit</a></p>
 
       
@@ -272,18 +277,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/01/19/2016-1-19/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Git merge &#39;commit&#39;
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/16/command/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo 常用命令</div>
+    <a href="/2016/01/19/2016-1-19/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git merge &#39;commit&#39;</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -312,7 +308,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2016-1-18" data-title="Git 新建 删除branch" data-url="http://yoursite.com/2016/01/18/2016-1-18/"></div>
+	<div class="ds-thread" data-thread-key="2016-1-18" data-title="Git 新建 删除branch" data-url="http://yoursite.com/2016/01/19/2016-1-18/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

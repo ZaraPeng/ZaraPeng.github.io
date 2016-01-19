@@ -192,6 +192,88 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-2016-1-18" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/19/2016-1-18/" class="article-date">
+  	<time datetime="2016-01-19T08:57:24.000Z" itemprop="datePublished">2016-01-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/19/2016-1-18/">Git 新建 删除branch</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>新建Branch</strong></p>
+<blockquote>
+<p>第一步：</p>
+</blockquote>
+<p>查看当前branch 和远程服务器branch<br>newdeMacBook-Pro-3:cashier PengYanan$ git branch -a<br>  *develop_v1.4.0<br>  develop_v1.4.0_test<br>  remotes/origin/develop_v1.0.0<br>  remotes/origin/develop_v1.1.0<br>  remotes/origin/develop_v1.2.0<br>  remotes/origin/develop_v1.3.0<br>  remotes/origin/develop_v1.4.0<br>  remotes/origin/develop_v1.4.0_test<br>  remotes/origin/master</p>
+<p>当前branch 为* xxxxx</p>
+<blockquote>
+<p>第二步：</p>
+</blockquote>
+<p><code>git log &lt;branchName&gt;</code> 查看commit历史</p>
+<p>commit e51667bc36de19c3043d109c45e65611ba5bc9e6<br>Author: **<br>Date:   Mon Jan 18 16:38:04 2016 +0800<br>    fix bug#000111</p>
+<blockquote>
+<p>第三步：</p>
+</blockquote>
+<pre><code>git checkout -b &lt;new branch name&gt; e51667bc36de19c3043d109c45e65611ba5bc9e6
+</code></pre><p>This will create the new branch and check it out.</p>
+<pre><code>git push &lt;remote-name&gt; &lt;new branch name&gt;
+</code></pre><p><strong>删除branch</strong></p>
+<p>To delete a local branch/tag</p>
+<pre><code>git branch -d the_local_branch
+git tag -d the_local_tag
+</code></pre><p>To remove a remote branch</p>
+<pre><code>git push origin :the_remote_branch
+git push origin --delete the_remote_branch
+</code></pre><p>To remove a remote tag</p>
+<pre><code>git push origin :refs/tags/the_remote_tag
+git push origin --delete tag the_remote_tag
+</code></pre><p>参考<br><a href="http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch/" target="_blank" rel="external">http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch/</a><br><a href="http://stackoverflow.com/questions/7167645/how-do-i-create-a-new-git-branch-from-an-old-commit" target="_blank" rel="external">http://stackoverflow.com/questions/7167645/how-do-i-create-a-new-git-branch-from-an-old-commit</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-2016-1-19" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -229,83 +311,6 @@ git cherry-pick D..F
 <p>Note 3: To include A just type git cherry-pick A^..B – sschaef</p>
 </blockquote>
 <p>参考<br><a href="http://stackoverflow.com/questions/1670970/how-to-cherry-pick-multiple-commits" target="_blank" rel="external">http://stackoverflow.com/questions/1670970/how-to-cherry-pick-multiple-commits</a><br><a href="http://stackoverflow.com/questions/6372044/how-do-i-merge-a-specific-commit-from-one-branch-into-another-in-git" target="_blank" rel="external">http://stackoverflow.com/questions/6372044/how-do-i-merge-a-specific-commit-from-one-branch-into-another-in-git</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-2016-1-18" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/18/2016-1-18/" class="article-date">
-  	<time datetime="2016-01-19T04:59:43.000Z" itemprop="datePublished">2016-01-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/18/2016-1-18/">Git 新建 删除branch</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>新建Branch</strong></p>
-<blockquote>
-<p>第一步：</p>
-</blockquote>
-<p>查看当前branch 和远程服务器branch<br>newdeMacBook-Pro-3:cashier PengYanan$ git branch -a<br>  *develop_v1.4.0<br>  develop_v1.4.0_test<br>  remotes/origin/develop_v1.0.0<br>  remotes/origin/develop_v1.1.0<br>  remotes/origin/develop_v1.2.0<br>  remotes/origin/develop_v1.3.0<br>  remotes/origin/develop_v1.4.0<br>  remotes/origin/develop_v1.4.0_test<br>  remotes/origin/master</p>
-<p>当前branch 为* xxxxx</p>
-<blockquote>
-<p>第二步：</p>
-</blockquote>
-<p><code>git log &lt;branchName&gt;</code> 查看commit历史</p>
-<p>commit e51667bc36de19c3043d109c45e65611ba5bc9e6<br>Author: **<br>Date:   Mon Jan 18 16:38:04 2016 +0800<br>    fix bug#000111</p>
-<blockquote>
-<p>第三步：</p>
-</blockquote>
-<pre><code>git checkout -b &lt;new branch name&gt; e51667bc36de19c3043d109c45e65611ba5bc9e6
-</code></pre><p>This will create the new branch and check it out.</p>
-<pre><code>git push &lt;remote-name&gt; &lt;new branch name&gt;
-</code></pre><p><strong>删除branch</strong></p>
-<p>To delete a local branch</p>
-<pre><code>git branch -d the_local_branch
-</code></pre><p>To remove a remote branch (if you know what you are doing!)</p>
-<pre><code>git push origin :the_remote_branch
-</code></pre><p>参考<br><a href="http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch/" target="_blank" rel="external">http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch/</a><br><a href="http://stackoverflow.com/questions/7167645/how-do-i-create-a-new-git-branch-from-an-old-commit" target="_blank" rel="external">http://stackoverflow.com/questions/7167645/how-do-i-create-a-new-git-branch-from-an-old-commit</a></p>
 
       
     </div>
