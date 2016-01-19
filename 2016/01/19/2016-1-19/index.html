@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Git | Zara.Peng&#39;s Blog</title>
+  <title>Git merge &#39;commit&#39; | Zara.Peng&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zara.Peng's Blog">
-<meta property="og:url" content="http://yoursite.com/tags/Git/index.html">
+  <meta name="description" content="背景：commit A,B on Branch branchAcommit A,B,C,D,E,F on Branch branchB我想merge D,E,F commit 到branchA
+git cherry-pick &amp;lt;commit&amp;gt;
+
+git cherry-pick D..F
+
+git cherry-pick” learned to pick a range of commi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git merge 'commit'">
+<meta property="og:url" content="http://yoursite.com/2016/01/19/2016-1-19/index.html">
 <meta property="og:site_name" content="Zara.Peng's Blog">
-<meta property="og:description">
+<meta property="og:description" content="背景：commit A,B on Branch branchAcommit A,B,C,D,E,F on Branch branchB我想merge D,E,F commit 到branchA
+git cherry-pick &amp;lt;commit&amp;gt;
+
+git cherry-pick D..F
+
+git cherry-pick” learned to pick a range of commi">
+<meta property="og:updated_time" content="2016-01-19T05:29:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zara.Peng's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Git merge 'commit'">
+<meta name="twitter:description" content="背景：commit A,B on Branch branchAcommit A,B,C,D,E,F on Branch branchB我想merge D,E,F commit 到branchA
+git cherry-pick &amp;lt;commit&amp;gt;
+
+git cherry-pick D..F
+
+git cherry-pick” learned to pick a range of commi">
   
     <link rel="alternative" href="/atom.xml" title="Zara.Peng&#39;s Blog" type="application/atom+xml">
   
@@ -190,84 +206,113 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-2016-1-19" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/01/19/2016-1-19/" class="archive-article-date">
-  	<time datetime="2016-01-19T05:29:20.000Z" itemprop="datePublished">Jan 19</time>
+    <div class="article-meta">
+      <a href="/2016/01/19/2016-1-19/" class="article-date">
+  	<time datetime="2016-01-19T05:29:20.000Z" itemprop="datePublished">2016-01-19</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/19/2016-1-19/">Git merge &#39;commit&#39;</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git merge &#39;commit&#39;
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+      </div>
+      
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/01/18/2016-1-18/" class="archive-article-date">
-  	<time datetime="2016-01-19T04:59:43.000Z" itemprop="datePublished">Jan 18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/18/2016-1-18/">Git 新建 删除branch</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>背景：<br>commit A,B on Branch branchA<br>commit A,B,C,D,E,F on Branch branchB<br>我想merge D,E,F commit 到branchA</p>
+<pre><code>git cherry-pick &lt;commit&gt;
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+git cherry-pick D..F
+</code></pre><blockquote>
+<p>git cherry-pick” learned to pick a range of commits (e.g. “cherry-pick<br>A..B” and “cherry-pick –stdin”), so did “git revert”; these do not<br>support the nicer sequencing control “rebase [-i]” has, though.</p>
+<p>Note 1: In the “cherry-pick A..B” form, A should be older than B. If<br>they’re the wrong order the command will silently fail. – damian</p>
+<p>Note 2: Also, this will not cherry-pick A, but rather everything after<br>A up to and including B. – J. B. Rainsberger</p>
+<p>Note 3: To include A just type git cherry-pick A^..B – sschaef</p>
+</blockquote>
+<p>参考<br><a href="http://stackoverflow.com/questions/1670970/how-to-cherry-pick-multiple-commits" target="_blank" rel="external">http://stackoverflow.com/questions/1670970/how-to-cherry-pick-multiple-commits</a><br><a href="http://stackoverflow.com/questions/6372044/how-do-i-merge-a-specific-commit-from-one-branch-into-another-in-git" target="_blank" rel="external">http://stackoverflow.com/questions/6372044/how-do-i-merge-a-specific-commit-from-one-branch-into-another-in-git</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/18/2016-1-18/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git 新建 删除branch</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016-1-19" data-title="Git merge &#39;commit&#39;" data-url="http://yoursite.com/2016/01/19/2016-1-19/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -293,9 +338,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}

@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a>
+						<a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a>
 					</div>
 				</section>
 				
@@ -191,6 +191,71 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-2016-1-19" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/19/2016-1-19/" class="article-date">
+  	<time datetime="2016-01-19T05:29:20.000Z" itemprop="datePublished">2016-01-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/19/2016-1-19/">Git merge &#39;commit&#39;</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>背景：<br>commit A,B on Branch branchA<br>commit A,B,C,D,E,F on Branch branchB<br>我想merge D,E,F commit 到branchA</p>
+<pre><code>git cherry-pick &lt;commit&gt;
+
+git cherry-pick D..F
+</code></pre><blockquote>
+<p>git cherry-pick” learned to pick a range of commits (e.g. “cherry-pick<br>A..B” and “cherry-pick –stdin”), so did “git revert”; these do not<br>support the nicer sequencing control “rebase [-i]” has, though.</p>
+<p>Note 1: In the “cherry-pick A..B” form, A should be older than B. If<br>they’re the wrong order the command will silently fail. – damian</p>
+<p>Note 2: Also, this will not cherry-pick A, but rather everything after<br>A up to and including B. – J. B. Rainsberger</p>
+<p>Note 3: To include A just type git cherry-pick A^..B – sschaef</p>
+</blockquote>
+<p>参考<br><a href="http://stackoverflow.com/questions/1670970/how-to-cherry-pick-multiple-commits" target="_blank" rel="external">http://stackoverflow.com/questions/1670970/how-to-cherry-pick-multiple-commits</a><br><a href="http://stackoverflow.com/questions/6372044/how-do-i-merge-a-specific-commit-from-one-branch-into-another-in-git" target="_blank" rel="external">http://stackoverflow.com/questions/6372044/how-do-i-merge-a-specific-commit-from-one-branch-into-another-in-git</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-2016-1-18" class="article article-type-post" itemscope itemprop="blogPost">
   
