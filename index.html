@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a>
+						<a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a>
 					</div>
 				</section>
 				
@@ -191,6 +191,94 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-2016-1-20" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/20/2016-1-20/" class="article-date">
+  	<time datetime="2016-01-20T05:29:21.000Z" itemprop="datePublished">2016-01-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/20/2016-1-20/">Linux 常用命令(1)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>清屏</strong> ：CTRL + l /clear<br><strong>软连接</strong>：ln -s [原文件] [目标文件] 类似windows的快捷方式<br>ln －s ／root／cxxxx ／root／cang／<br><strong>文件搜索命令：locate</strong></p>
+<blockquote>
+<p><code>root@224570:~# locate 2016-1</code><br>/root/blog/.deploy_git/2016/01/19/2016-1-19<br>/root/blog/.deploy_git/2016/01/19/2016-1-19/index.html<br>/root/blog/public/2016/01/19/2016-1-19<br>/root/blog/public/2016/01/19/2016-1-19/index.html<br>/root/blog/source/_posts/2016-1-18.md<br>/root/blog/source/_posts/2016-1-19.md</p>
+</blockquote>
+<p>注意：新建的文件 会搜索不到，需要updatedb 才行<br>查看updatedb.conf文件 满足下面的规则 都不进行搜索</p>
+<blockquote>
+<p><code>root@224570:~# locate updatedb</code><br>/etc/updatedb.conf<br><img src="/img/20160120/updatedb.png" alt="enter description here" title="updatedb.png"></p>
+</blockquote>
+<p><strong>命令搜查命令：whereis which</strong></p>
+<blockquote>
+<p><code>root@224570:~# whereis whereis</code><br>whereis: /usr/bin/whereis<br>/usr/bin/X11/whereis<br>/usr/share/man/man1/whereis.1.gz </p>
+<p><code>root@224570:~# which which</code><br>/usr/bin/which<br>root@224570:~#</p>
+</blockquote>
+<p><strong>find命令</strong><br>find是完全匹配，系统开销较大。</p>
+<p><strong>通配符</strong></p>
+<blockquote>
+<p><em>, ?, []<br>find / ‘</em>.log’<br>find / ‘ab?.log’<br>find / ‘ab[dc]*.log’ 只包含d/b的</p>
+<p>-iname 不区分大小</p>
+<p>find / -nouser 查找没有所有者的文件（存在于sys、proc文件中）</p>
+<p>find / -size 中文件大小的k要小写，M要大写，很变态</p>
+<p>find / -inum根据节点号查找</p>
+<p>  <code>find /etc -size 20k -a -size 50k -exec/*前面结果交给后面处理*/ ls -lh {}\;(符号为固定格式)</code></p>
+<p>root@224570:~# <code>find /etc -size +20k -a -size -40k</code><br>/etc/mime.types<br>/etc/apache2/magic<br>/etc/init.d/sendmail<br>/etc/dnsmasq.conf</p>
+<p>root@224570:~# <code>find /etc -size +20k -a -size -40k -exec ls -lh {} \;</code><br>-rw-r–r– 1 root root 24K Nov 15  2010 /etc/mime.types<br>-rw-r–r– 1 root root 31K Feb  6  2012 /etc/apache2/magic<br>-rwxr-xr-x 1 root root 33K Sep 19  2013 /etc/init.d/sendmail<br>-rw-r–r– 1 root root 23K Nov 24 08:42 /etc/dnsmasq.conf</p>
+</blockquote>
+<p><strong>grep命令</strong><br>grep [-v/i] “wanted string” file_name</p>
+<blockquote>
+<p>[work@iZ23xtjojg3Z logs]$ <code>grep &#39;2016-01-20 10:57:2[234],*&#39; catalina.out</code></p>
+</blockquote>
+<p>-v 取反<br>-i 不区分大小写</p>
+<p>通配符</p>
+<blockquote>
+<p>*, ?, []</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-2016-1-18" class="article article-type-post" itemscope itemprop="blogPost">
   
